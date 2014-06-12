@@ -45,6 +45,10 @@ public class PlaylistItemInfo implements Serializable{
 	
 	private boolean isPlaceholderItem = false;
 
+	private String productCode;
+	private String subscriptionStatus;
+
+
 	public PlaylistItemInfo() {		
 	}
 
@@ -219,6 +223,23 @@ public class PlaylistItemInfo implements Serializable{
 	public void setPlaceholderItem(boolean isPlaceholderItem) {
 		this.isPlaceholderItem = isPlaceholderItem;
 	}
+	
+	public void setProductCode(String productCode) {
+		this.productCode = productCode;
+	}
+
+	public String getProductCode() {
+		return productCode;
+	}
+
+	public void setSubscriptionStatus(String subscriptionStatus) {
+		this.subscriptionStatus = subscriptionStatus;
+	}
+
+	public String getSubscriptionStatus() {
+		return subscriptionStatus;
+	}
+
 	
 	public PlaylistItemInfo copy() {
 		PlaylistItemInfo copy = new PlaylistItemInfo();
