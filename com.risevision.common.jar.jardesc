@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="WINDOWS-1252" standalone="no"?>
+<?xml version="1.0" encoding="US-ASCII" standalone="no"?>
 <jardesc>
-    <jar path="rdn2common/com.risevision.common.jar"/>
-    <options buildIfNeeded="true" compress="true" descriptionLocation="/rdn2common/com.risevision.common.jar.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="true" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <jar path="rva-common/com.risevision.common.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/rva-common/com.risevision.common.jar.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="true" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
     <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
     <selectedProjects/>
     <manifest generateManifest="true" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
@@ -11,10 +11,11 @@
         </sealing>
     </manifest>
     <selectedElements exportClassFiles="true" exportJavaFiles="true" exportOutputFolder="false">
-        <javaElement handleIdentifier="=rdn2common/src&lt;com.risevision.common.client.utils"/>
-        <javaElement handleIdentifier="=rdn2common/src&lt;com.risevision.common.client.json"/>
-        <javaElement handleIdentifier="=rdn2common/src&lt;com.risevision.common.client.attribute"/>
-        <javaElement handleIdentifier="=rdn2common/src&lt;com.risevision.common"/>
-        <javaElement handleIdentifier="=rdn2common/src&lt;com.risevision.common.client.info"/>
+        <file path="/rva-common/src/log4j.properties"/>
+        <javaElement handleIdentifier="=rva-common/src&lt;com.risevision.common"/>
+        <javaElement handleIdentifier="=rva-common/src&lt;com.risevision.common.client.info"/>
+        <javaElement handleIdentifier="=rva-common/src&lt;com.risevision.common.client.attribute"/>
+        <javaElement handleIdentifier="=rva-common/src&lt;com.risevision.common.client.utils"/>
+        <javaElement handleIdentifier="=rva-common/src&lt;com.risevision.common.client.json"/>
     </selectedElements>
 </jardesc>

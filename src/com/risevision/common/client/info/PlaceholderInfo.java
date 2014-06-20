@@ -12,7 +12,7 @@ public class PlaceholderInfo implements Serializable {
 	public static final String[][] TRANSITION_TYPES = 
 					{{"None", "none"},
 					{"Fade", "fade"},
-					{"Iris", "iris"},
+//					{"Iris", "iris"},
 					{"Slide Right", "slide-right"},
 					{"Slide Left", "slide-left"},
 					{"Slide Up", "slide-up"},
