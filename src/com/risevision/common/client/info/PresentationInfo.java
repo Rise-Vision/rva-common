@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import com.risevision.common.client.utils.RiseUtils;
-import com.risevision.core.api.types.PresentationPublishType;
 
 @SuppressWarnings("serial")
 public class PresentationInfo implements Serializable {
@@ -35,7 +34,7 @@ public class PresentationInfo implements Serializable {
 	private String name;
 
 	private String layout;
-	private int publishType;
+//	private int publishType;
 	private boolean template;
 	private int revisionStatus;
 
@@ -62,7 +61,7 @@ public class PresentationInfo implements Serializable {
 		id = null;
 		name = "New Presentation";
 		layout = DEFAULT_LAYOUT;
-		setPublishType(PresentationPublishType.SIGNED_IN_VIEWERS);
+//		setPublishType(PresentationPublishType.SIGNED_IN_VIEWERS);
 		template = false;
 		
 		width = 1920;
@@ -103,13 +102,13 @@ public class PresentationInfo implements Serializable {
 		this.layout = layout;
 	}
 
-	public int getPublishType() {
-		return publishType;
-	}
-
-	public void setPublishType(int publishType) {
-		this.publishType = publishType;
-	}
+//	public int getPublishType() {
+//		return publishType;
+//	}
+//
+//	public void setPublishType(int publishType) {
+//		this.publishType = publishType;
+//	}
 
 	public boolean isTemplate() {
 		return template;
