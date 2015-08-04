@@ -202,6 +202,9 @@ public abstract class JSOModel extends JavaScriptObject {
 				return true;
 			else if (Boolean.FALSE.toString().equals(value))
 				return false;
+			else if (value == null) {
+				return getBooleanNative(key);
+			}
 			else
 				return defaultValue;
 		} catch (Exception e) {
@@ -209,6 +212,10 @@ public abstract class JSOModel extends JavaScriptObject {
 		}
     }
     
+	public final native boolean getBooleanNative(String key) /*-{
+		return this[key];
+	}-*/;
+
     public final Date getDate(String key) {
     	long date = (long)getDateNative(key);
     	if (date != 0) {
