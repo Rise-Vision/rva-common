@@ -197,23 +197,25 @@ public abstract class JSOModel extends JavaScriptObject {
 	
     public final boolean getBoolean(String key, Boolean defaultValue) {
 		try {
-			String value = get(key);
-			if (Boolean.TRUE.toString().equals(value))
-				return true;
-			else if (Boolean.FALSE.toString().equals(value))
-				return false;
-			else if (value == null) {
-				return getBooleanNative(key);
-			}
-			else
-				return defaultValue;
+			return getBooleanNative(key, defaultValue);
 		} catch (Exception e) {
 			return defaultValue;
 		}
     }
     
-	public final native boolean getBooleanNative(String key) /*-{
-		return this[key];
+	public final native boolean getBooleanNative(String key, Boolean defaultValue) /*-{
+		if (this[key] === "true") {
+			return true;
+		}
+		else if (this[key] === "false") {
+			return false;
+		}
+		else if (this.hasOwnProperty(key) && this[key] !== null) {
+			return this[key];
+		}
+		else {
+			return defaultValue;
+		} 
 	}-*/;
 
     public final Date getDate(String key) {
