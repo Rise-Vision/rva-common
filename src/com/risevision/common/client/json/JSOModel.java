@@ -164,8 +164,12 @@ public abstract class JSOModel extends JavaScriptObject {
 	}-*/;
 
     public final void set(String key, Boolean value) {
-    	set(key, Boolean.toString(value));
+    	setBoolean(key, value);
     }
+    
+    private final native void setBoolean(String key, boolean value) /*-{
+		this[key] = value;
+	}-*/;
     
     public final void set(String key, Date value) {
     	set(key, RiseUtils.dateToString(value));
