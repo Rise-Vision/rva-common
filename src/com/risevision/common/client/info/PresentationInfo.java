@@ -14,6 +14,8 @@ public class PresentationInfo implements Serializable {
 	public static final String POINTER = "hidePointer";
 	public static final String DONE_PLACEHOLDER = "donePlaceholder";
 	
+	public static final String STORE_PRODUCT = "isStoreProduct";
+	
 //	public static final int EVERYONE = 1;
 //	public static final int SIGNED_IN_VIEWERS = 0;
 	
@@ -36,6 +38,7 @@ public class PresentationInfo implements Serializable {
 	private String layout;
 //	private int publishType;
 	private boolean template;
+	private boolean storeProduct;
 	private int revisionStatus;
 
 	private String helpURL;
@@ -116,6 +119,14 @@ public class PresentationInfo implements Serializable {
 
 	public void setTemplate(boolean template) {
 		this.template = template;
+	}
+	
+	public boolean isStoreProduct() {
+		return storeProduct;
+	}
+
+	public void setStoreProduct(boolean storeProduct) {
+		this.storeProduct = storeProduct;
 	}
 
 	public void setRevisionStatus(int revisionStatus) {
