@@ -164,23 +164,21 @@ public class PresentationJsonParser {
 //			placeholder.setPlaylistItems(playlistItems);
 //		}
 				
-		if (placeholder.getPlaylistItems() == null) {
-			placeholder.setPlaylistItems(new ArrayList<PlaylistItemInfo>());
-		}
+		placeholder.setPlaylistItems(new ArrayList<PlaylistItemInfo>());
 		
 		if (jsPlaylistItems != null) {
 			for (int i = 0; i < jsPlaylistItems.length(); i++) {
-				String id = jsPlaylistItems.get(i).get(PlaylistItemAttribute.INDEX);
+//				String id = jsPlaylistItems.get(i).get(PlaylistItemAttribute.INDEX);
 				
 				PlaylistItemInfo currentPlaylistItem = null;
-				if (id != null && !id.isEmpty()) {
-					for (PlaylistItemInfo playlistItem : placeholder.getPlaylistItems()) {
-						if (id.equals(playlistItem.getId())) {
-							currentPlaylistItem = playlistItem;
-							break;
-						}
-					}
-				}
+//				if (id != null && !id.isEmpty()) {
+//					for (PlaylistItemInfo playlistItem : placeholder.getPlaylistItems()) {
+//						if (id.equals(playlistItem.getId())) {
+//							currentPlaylistItem = playlistItem;
+//							break;
+//						}
+//					}
+//				}
 				
 				if (currentPlaylistItem == null) {
 					currentPlaylistItem = new PlaylistItemInfo();
