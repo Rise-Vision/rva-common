@@ -4,7 +4,7 @@ public class HtmlParser {
 	public static final String UNIT_PIXEL = "px";
 	public static final String UNIT_PERCENT = "%";
 	
-	private static final String numbers = "0123456789.";
+	private static final String numbers = "0123456789.-";
 	
 	protected static String getUnitString(double value, String unit) {
 		int decimalPoints = 0;
